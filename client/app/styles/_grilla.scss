@@ -1,0 +1,63 @@
+.contenedor {
+	@extend .clearfix;
+	width		: 100%;
+	max-width	: 71.25em;
+	margin-left	: auto;
+	margin-right: auto;
+}
+.contenedor--completo {
+	width		: 100%;
+	max-width 	: 100%;
+}
+.contenedor--encabezado {
+	@include transicion(all,0.2s);
+	position	: fixed;
+	top			: 0;
+	left		: 0;
+	right		: 0;
+	z-index		: 9;
+}
+.columnas,
+.columna {
+	float 	: left;
+	&.sin-padding {
+		padding : 0;
+	}
+}
+.tabla {
+	display : table;
+}
+.de-tabla {
+	display : table-cell;
+}
+.una {
+	width 	: 100%;
+}
+.un-medio,
+.dos-cuartos {
+	width 	: 50%;
+}
+.un-tercio {
+	width 	: 33.3333333%;
+}
+.dos-tercios {
+	width 	: 66.6666666%;
+}
+.un-cuarto {
+	width 	: 25%;
+}
+.un-sexto {
+	width	: 16.6666667%;
+}
+.un-octavo {
+	width	: 12.5%;
+}
+.tres-cuartos {
+	width 	: 75%;
+}
+.golden-mayor {
+	width 	: 61.8033989%;
+}
+.golden-minor {
+	width 	: 38.1966011%
+}

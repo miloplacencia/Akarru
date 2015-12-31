@@ -1,0 +1,47 @@
+.onOff__label {
+	cursor		: pointer;
+	width 		: 90px;
+	height 		: 24px;
+	position	: relative;
+	display		: block;
+	overflow	: hidden;
+}
+.onOff__span {
+	font-size 		: 11px;
+	font-weight		: 700;
+	text-align		: center;
+	text-transform	: uppercase;
+	width			: 90px;
+	padding			: 5px 10px;
+	position 		: absolute;
+	top 			: 0;
+	display			: inline-block;
+	transition 		: all 0.25s ease-in-out;
+}
+.onOff__span--activo {
+	color			: $morado-marca;
+	background		: $amarillo-marca;
+	border-right	: 10px solid hsl(63, 87%, 40%);
+}
+.onOff__span--inactivo {
+	color		: $amarillo-marca;
+	background	: $morado-marca;
+	border-left	: 10px solid hsl(288, 20%, 40%);
+}
+
+.onOff__label--activo {
+	.onOff__span--activo {
+		left	: 0;
+	}
+	.onOff__span--inactivo {
+		left 	: 100%;
+	}
+}
+.onOff__label--inactivo {
+	.onOff__span--activo {
+		left 	: -100%;
+	}
+	.onOff__span--inactivo {
+		left 	: 0;
+	}
+}

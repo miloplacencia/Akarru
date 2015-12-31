@@ -1,0 +1,241 @@
+.blanco {
+	background 	: white;
+}
+
+.inicio__bienvenida {
+	padding 	: 50px 0;
+	background	: $amarillo-marca;
+	color 		: $morado-marca;
+}
+
+
+
+.contenedor--titulo-creaciones {
+	margin-top		: 50px;
+	text-transform	: uppercase; 
+}
+.titulo-creaciones__titulo {
+	margin		: 0;
+	padding 	: 0;
+	color		: #54454b;
+	float		: left;
+}
+.titulo-creaciones__contenedor-filtros {
+	float		: right;
+	font-size	: 12px;
+	color 		: hsl(0,0%,45%);
+	//margin-top	: 9px;
+}
+.contenedor-filtros__filtro {
+	display			: inline-block;
+	margin-right	: 5px;
+	text-decoration	: none;
+	padding			: 5px 7px;
+	color 			: $morado-marca;
+	
+	&:hover {
+		background	: hsl(0,0%,90%);
+	}
+
+	&.activo {
+		background	: $amarillo-marca;
+		color		: $morado-marca;
+	}
+}
+
+
+.lista-creaciones__creacion {
+	@extend .clearfix;
+	margin-top : 50px;
+}
+.creacion__contenedor-imagen {
+	background 	: hsl(0,0%,80%);
+}
+.contenedor-imagen__imagen {}
+.creacion__imagen {
+	max-width 	: 100%;
+	width 		: 100%;
+}
+.contenedor-imagen__comentarios {
+	text-transform	: uppercase;
+	border-top		: 1px solid hsl(0,0%,90%);
+	padding			: 20px;
+}
+
+
+
+.creacion__info-autor-coleccion {
+	width 		: 100%;
+	max-height 	: 160px;
+}
+.creacion__avatar {
+	background 		: hsl(0,0%,90%);
+	height 			: 160px;
+	width 			: 160px;
+	vertical-align	: middle;
+	float			: left;
+}
+.creacion__info-creacion {
+	width 		: calc( 100% - 160px );
+	padding		: 20px 20px 49px;
+	height		: 160px;
+	position 	: relative;
+	float		: right;
+}
+.creacion__nombre-autor {
+	color 			: hsl(0,0%,45%);
+	text-transform	: uppercase;
+	font-size 		: 12px;
+	margin-bottom 	: 5px;
+	display			: inline-block;
+	text-decoration	: none;
+	vertical-align	: middle;
+	border-bottom 	: 1px solid transparent;
+
+	&:hover {
+		border-bottom-color	: hsl(0,0%,45%);
+	}
+}
+.creacion__seguir {
+	display			: inline-block;
+	text-decoration	: none;
+	color			: white;
+	text-align		: center;
+	vertical-align	: middle;
+	background		: hsl(272, 20%, 35%);
+
+	width			: 15px;
+	height			: 15px;
+	font-size		: 20px;
+	line-height		: 0.424;
+	padding			: 2px;
+
+	&:hover {
+		background	: hsl(0, 0%, 70%);
+		color		: white;
+	}
+}
+.creacion__seguir--autor {
+	margin	: 0 0 5px 5px;
+}
+.creacion__seguir--coleccion {
+	margin-left	: 5px;
+}
+
+
+
+.creacion__nombre-creacion {
+	margin 		: 0;
+	font-size 	: 24px;
+	line-height : 1;
+	color 		: #451B36;
+}
+.creacion__nombre-coleccion {
+	font-size 	: 12px;
+}
+.creacion__meta-data {
+	position 		: absolute;
+	bottom 			: 0;
+	left			: 0;
+	right 			: 0;
+	width 			: 100%;
+	font-size 		: 13px;
+	//background 		: hsl(0,0%,98%);
+	height 			: 30px;
+	//padding 		: 9px 15px;
+	font-size 		: 10px;
+	text-transform	: uppercase;
+	border-top 		: 1px solid hsl(0,0%,90%);
+}
+.meta-data__item {
+	width 			: 33.333333%;
+	height			: 30px;
+	vertical-align	: middle;
+	float			: left;
+	text-align		: center;
+	/*
+	border-right 	: 1px solid hsl(0,0%,90%);
+
+	&:last-of-type {
+		border-right	: 0;
+	}
+	*/
+}
+.meta-data__icon-wrapper {
+	padding			: 5px 5px 5px 0;
+	display			: inline-block;
+	vertical-align	: middle;
+	height			: 30px;
+	text-align		: center;
+
+	i {
+		transform	: scale(0.75);
+	}
+}
+.meta-data__text {
+	display			: inline-block;
+	vertical-align	: middle;
+	height			: 100%;
+	padding			: 8px 8px 8px 0;
+	text-align		: center;
+}
+
+.ver-mas,
+.creacion__compartir {
+	font-size 		: 12px;
+	text-transform	: uppercase;
+}
+.creacion__ver-mas {
+	width	: 100%;
+}
+.ver-mas {
+	padding			: 10px 15px;
+	width			: 50%;
+	//border-right	: 1px solid white;
+	text-decoration	: none;
+	color 			: inherit;
+	background		: hsl(272, 20%, 35%);//$morado-marca-3;
+	color			: white;
+	vertical-align	: middle;
+
+	&:last-of-type {
+		//border-right	: 0;
+		background		: hsl(272, 20%, 40%);
+	}
+}
+
+.creacion__compartir {
+	//border-top		: 1px solid white;
+	background 		: hsl(0,0%,90%);
+	width			: 100%;
+
+	* {
+		vertical-align	: middle;
+	}
+}
+
+.creacion__texto-compartir {
+	padding	: 10px 15px;
+}
+.creacion__link-compartir {
+	padding			: 10px;
+	text-decoration	: none;
+	color 			: hsl(0,0%,30%);//white;
+	
+	&:hover {
+		color	: white;
+	}
+	&.creacion__link-compartir--twitter:hover {
+		background	: #00aced;
+	}
+	&.creacion__link-compartir--facebook:hover {
+		background	: #3b5998;
+	}
+	&.creacion__link-compartir--tumblr:hover {
+		background	: #32506d;
+	}
+}
+.icono-compartir {
+	transform		: scale(0.75);
+}
+.texto-compartir {}

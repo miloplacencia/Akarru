@@ -1,0 +1,115 @@
+$browsers:('-webkit-','-moz-','-o-','-ms-','');
+
+
+//Transicion Function
+@mixin transicion($tipo: all,$duracion:0.5s,$animacion:ease-in-out,$delay:0s) {
+  $p: $tipo $duracion $animacion $delay;
+  @include prefixer(transition,$p);
+}
+
+//Prefixer helper
+@mixin prefixer($property,$value) {
+  @each $browser in $browsers {
+    #{$browser}#{$property}: $value;
+  }
+  $property: $value;
+}
+
+//Animate Helper
+@mixin animate($name,$duration:0.5s,$delay:0s,$timing:ease-in-out,$iteration:1,$forwards:forwards) 
+{
+  $animateProperty: $name $duration $timing $iteration $forwards $delay;
+  @include prefixer(animation,$animateProperty);
+}
+
+//Translate3d Helper
+@mixin translate3d($posX:0,$posY:0){
+  @include prefixer('transform',translate3d(#{$posX},#{$posY},0));
+}
+
+//Translate Helper
+@mixin translate($posX:0,$posY:0)
+{
+  @include prefixer('transform',translate(#{$posX},#{$posY}));
+}
+
+@mixin css3d {
+  .csstransforms3d {
+    @content;
+  }
+}
+@mixin cssno3d {
+  .no-csstransforms3d {
+    @content;
+  }
+}
+@mixin cssnotransition {
+  .no-csstransitions {
+    @content;
+  }
+}
+
+
+@function toRem($valor:0) {
+  @return ($valor/$em)*1rem;
+}
+@function toEm($valor:0) {
+  @return ($valor/$em)*1em;
+}
+
+@mixin fontSize($fontSize:0)
+{
+  font-size: toEm($fontSize);
+  font-size: toRem($fontSize);
+}
+
+
+@mixin box {
+  @include prefixer(box-sizing,border-box);
+}
+
+@mixin quiebres($ancho:mobile){
+  @if $ancho == desktop {
+    //solo escritorio y tablets grandes/phablets
+    @media screen and (min-width:1025px){
+      @content;
+    }
+  }
+  @else if $ancho == tabletAndBelow {
+    @media screen and (max-width:1024px){
+      @content;
+    }
+  }
+  @else if $ancho == tablet {
+    //solo tablets
+    @media screen and (min-width:768px) and (max-width:1024px){
+      @content;
+    }
+  }
+  @else if $ancho == tabletAndAbove {
+    //Tablets hacia arriba
+    @media screen and (min-width:768px){
+      @content;
+    }
+  }
+  @else if $ancho == mobile {
+    @media screen and (max-width:767px){
+      @content;
+    }
+  }
+  @else if $ancho == landscape {
+    @media screen and (max-width: 767px) and (min-width:480px){
+      @content;
+    }
+  }
+  @else if $ancho == portrait {
+    @media screen and (max-width: 479px){
+      @content;
+    }
+  }
+  @else {
+    @media screen and (max-width:#{$ancho}px) {
+      @content;
+    }
+  }
+}

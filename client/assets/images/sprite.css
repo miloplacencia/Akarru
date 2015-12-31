@@ -1,0 +1,80 @@
+[class^="icon-"], [class*=" icon-"] {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-image: url(sprite.svg);
+}
+.icon-mail {
+	width: 20px;
+	height: 20px;
+	background-position: 0 0;
+}
+.icon-pencil {
+	width: 20px;
+	height: 20px;
+	background-position: -36px 0;
+}
+.icon-user {
+	width: 20px;
+	height: 20px;
+	background-position: -72px 0;
+}
+.icon-user-add {
+	width: 20px;
+	height: 20px;
+	background-position: -108px 0;
+}
+.icon-location {
+	width: 20px;
+	height: 20px;
+	background-position: -144px 0;
+}
+.icon-heart {
+	width: 20px;
+	height: 20px;
+	background-position: -180px 0;
+}
+.icon-heart2 {
+	width: 20px;
+	height: 20px;
+	background-position: -216px 0;
+}
+.icon-chat {
+	width: 20px;
+	height: 20px;
+	background-position: -252px 0;
+}
+.icon-comment {
+	width: 20px;
+	height: 20px;
+	background-position: -288px 0;
+}
+.icon-flag {
+	width: 20px;
+	height: 20px;
+	background-position: -324px 0;
+}
+.icon-eye {
+	width: 20px;
+	height: 20px;
+	background-position: -360px 0;
+}
+.icon-plus {
+	width: 20px;
+	height: 20px;
+	background-position: -396px 0;
+}
+.icon-twitter {
+	width: 20px;
+	height: 20px;
+	background-position: -432px 0;
+}
+.icon-facebook {
+	width: 20px;
+	height: 20px;
+	background-position: -468px 0;
+}
+.icon-tumblr {
+	width: 20px;
+	height: 20px;
+	background-position: -504px 0;
+}

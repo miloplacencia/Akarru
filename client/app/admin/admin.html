@@ -1,0 +1,70 @@
+<navbar></navbar>
+
+<div class="container">
+  <p>The delete user and user index api routes are restricted to users with the 'admin' role.</p>
+
+  <h2>Image Uploader Test</h2>
+
+  <image-crop-avatar></image-crop-avatar>
+
+  <h2>Colecciones</h2>
+  <ul class="colecciones">
+    <li>
+      <input type="text" ng-model="colecciones.nombre">
+      <a ng-click="colecciones.crear()">Crear Coleccion</a>
+    </li>
+    <li ng-repeat="coleccion in colecciones.list">
+      <div><b>nombre</b>: {{coleccion.nombre}}</div>
+      <div><b>autor</b>: {{coleccion.autor.usuario}}</div>
+      <div><b>generos</b>: {{coleccion.generos}}</div>
+      <div><a ng-click="colecciones.borrar(coleccion)">Borrar Coleccion</a></div>
+    </li>
+  </ul>
+  <h2>Creaciones</h2>
+  <ul class="creaciones">
+    <li>
+      <select name="colecciones.creacion" ng-model="creaciones.coleccion">
+        <option value="-1" selected>Elige una Coleccion</option>
+        <option value="{{ coleccion._id }}" ng-repeat="coleccion in colecciones.list track by $index">
+          {{ coleccion.nombre }}
+        </option>
+      </select>
+      <input type="text" ng-model="creaciones.nombre">
+      <a ng-click="creaciones.crear()">Crear Creacion</a>
+    </li>
+    <li ng-repeat="creacion in creaciones.list">
+      <div><b>nombre</b>: {{creacion.nombre}}</div>
+      <div><b>coleccion</b>: {{creacion.coleccion.nombre}}</div>
+      <div><b>autor</b>: {{creacion.autor.usuario}}</div>
+      <div><b>generos</b>: {{creacion.generos}}</div>
+      <div><a ng-click="creaciones.borrar(creacion)">Borrar Creacion</a></div>
+    </li>
+  </ul>
+
+  <h2>Mensajes</h2>
+  <div class="enviarmensaje">
+    <input type="text" class="mensaje" ng-model="mensaje.new">
+    <a ng-click="mensaje.enviar()">enviar mensaje</a>
+  </div>
+  <ul class="mensajes">
+    <li ng-repeat="m in mensajes">
+      <div><b>de</b>: {{m.de.usuario}}</div>
+      <div><b>para</b>: <span ng-repeat="para in m.para">{{para.usuario}}</span></div>
+      <div><b>mensaje</b>: {{m.mensaje}}</div>
+      <div><a ng-click="mensaje.borrar(m._id)">Borrar Mensaje</a></div>
+    </li>
+  </ul>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="user in users">
+        <strong>{{user.usuario}}</strong><br>
+        <span class="text-muted">{{user.email}}</span>
+        <input type="text" ng-model="user.role">
+        <a ng-click="cambioRol(user)" class="cambioRol">
+          cambiar rol
+        </a>
+        <a ng-click="delete(user)" class="trash">
+        	<span class="glyphicon glyphicon-trash pull-right">Delete</span>
+        </a>
+    </li>
+  </ul>
+</div>

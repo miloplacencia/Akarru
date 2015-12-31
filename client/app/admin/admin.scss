@@ -1,0 +1,23 @@
+.trash { color:rgb(209, 91, 71); }
+.imageBox {
+	width 				: 200px;
+	height 				: 200px;
+	background-repeat : no-repeat;
+	cursor 				: move;
+	position 			: relative;
+}
+.imageSelector,
+.thumbBox {
+	height: 200px;
+}
+.imageSelector {
+	display 		: block;
+	position 	: absolute;
+	top 			: 0;
+	left 			: 0;
+	bottom 		: 0;
+	right 		: 0;
+	height 		: 100%;
+	display 		: block;
+	background 	: none repeat scroll 0 0 transparent;
+}

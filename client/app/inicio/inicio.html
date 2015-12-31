@@ -1,0 +1,250 @@
+<navbar></navbar>
+
+<div class="inicio inicio__bienvenida">
+	<div class="contenedor contenedor--bienvenida-inicio">
+		<h1>¡Somos la expresión Artística en la Web!</h1>
+		<p>Akarrú es el lugar donde pretendemos agrupar a todos los creativos de la nación. Si te gusta dibujar, ¡este es tu lugar!.</p>
+		<p>Comparte historias o creaciones con el mundo, recibe retroalimentación de tus seguidores y ¡mejora!</p>
+	</div>
+</div>
+
+
+
+<div class="contenedor contenedor--titulo-creaciones">
+	<h1 class="titulo-creaciones__titulo">Últimas Creaciones </h1>
+	<div class="titulo-creaciones__contenedor-filtros">
+		<div class="titulo-creaciones__filtros-muestrame">
+			<span>Muestrame: </span>
+			<a href="#" class="contenedor-filtros__filtro">
+				Webcómics
+			</a>
+			<a href="#" class="contenedor-filtros__filtro">
+				Ilustraciones
+			</a>
+			<a href="#" class="contenedor-filtros__filtro activo">
+				Ambos
+			</a>
+		</div>
+		<div class="titulo-creaciones__filtros-orden">
+			<span>Ordena por: </span>
+			<a href="#" class="contenedor-filtros__filtro activo">
+				Fecha
+			</a>
+			<a href="#" class="contenedor-filtros__filtro">
+				Me Gusta
+			</a>
+			<a href="#" class="contenedor-filtros__filtro">
+				Visto
+			</a>
+		</div>
+	</div>
+</div>
+<div class="contenedor lista-creaciones">
+	
+	<div class="lista-creaciones__creacion">
+		<div class="golden-minor columnas blanco sin-padding creacion__info-autor">
+
+			<div class="creacion__info-autor-coleccion clearfix">
+
+				<div class="creacion__avatar">
+					<img ng-src="{{inicio.user.perfil.avatar}}" alt="" width="160" height="160">
+				</div>
+
+				<div class="creacion__info-creacion">
+
+					<div class="creacion__autor">
+						<a href="#" class="creacion__nombre-autor">GrotesCómics</a>
+						<a href="#" class="creacion__seguir  creacion__seguir--autor">+</a>
+					</div>
+					<h2 class="creacion__nombre-creacion">
+						<span class="creacion__ellipsis">Cuidarse <br>Cuidarse</span>
+					</h2>
+					<div class="creacion__coleccion">
+						<em class="creacion__nombre-coleccion">en El Sr. Intestino</em>
+						<!--<a href="#" class="creacion__seguir creacion__seguir--coleccion">+</a>-->
+					</div>
+
+					<div class="creacion__meta-data clearfix">
+
+						<div class="meta-data__item meta-data--visto clearfix">
+							<div class="meta-data__icon-wrapper">
+								<i class="icon-eye"></i>
+							</div>
+							<div class="meta-data__text">
+								99.9k
+							</div>
+						</div>
+
+						<div class="meta-data__item meta-data__item--subscriptores clearfix">
+							<div class="meta-data__icon-wrapper">
+								<i class="icon-user"></i>
+							</div>
+							<div class="meta-data__text">
+								99.9k
+							</div>
+						</div>
+
+						<div class="meta-data__item meta-data__item--me-gusta clearfix">
+							<div class="meta-data__icon-wrapper">
+								<i class="icon-heart"></i>
+							</div>
+							<div class="meta-data__text">
+								99.9k
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="creacion__compartir tabla">
+				<span class="creacion__texto-compartir de-tabla">
+					Compartir en
+				</span>
+				<a href="#" class="creacion__link-compartir creacion__link-compartir--facebook de-tabla">
+					<i class="icon-facebook icono-compartir"></i>
+					<span class="texto-compartir">Facebook</span>
+				</a>
+				<a href="#" class="creacion__link-compartir creacion__link-compartir--twitter de-tabla">
+					<i class="icon-twitter icono-compartir"></i>
+					<span class="texto-compartir">Twitter</span>
+				</a>
+				<a href="#" class="creacion__link-compartir creacion__link-compartir--tumblr de-tabla">
+					<i class="icon-tumblr icono-compartir"></i>
+					<span class="texto-compartir">Tumblr</span>
+				</a>
+			</div>
+
+			<!--
+			<div class="creacion__ver-mas tabla">
+				<a href="#" class="ver-mas ver-mas--autor de-tabla">
+					Ver más de GrotesCómics
+				</a>
+				<a href="#" class="ver-mas ver-mas--coleccion de-tabla">
+					Ver más de "El Sr. Intestino"
+				</a>
+			</div>
+			-->
+			
+
+		</div>
+
+		<div class="golden-mayor columnas sin-padding creacion__contenedor-imagen">
+			<div class="contenedor-imagen__imagen">
+				<img class="creacion__imagen" src="/assets/images/93.jpg" alt="">
+			</div>
+			<div class="contenedor-imagen__comentarios blanco">
+				<i class="icon-chat"></i>
+				<strong class="comentarios__cantidad">9.9k</strong> Comentarios
+			</div>
+		</div>
+	</div>
+
+
+	<div class="lista-creaciones__creacion">
+		<div class="golden-minor columnas blanco sin-padding creacion__info-autor">
+
+			<div class="creacion__info-autor-coleccion clearfix">
+				<div class="creacion__avatar">
+					<img ng-src="{{inicio.user.perfil.avatar}}" alt="" width="160" height="160">
+				</div>
+				<div class="creacion__info-creacion">
+					<div class="creacion__autor">
+						<a href="#" class="creacion__nombre-autor">Juanelo</a>
+						<a href="#" class="creacion__seguir  creacion__seguir--autor">+</a>
+					</div>
+					<h2 class="creacion__nombre-creacion">Distorsión Parental</h2>
+					<div class="creacion__coleccion">
+						<em class="creacion__nombre-coleccion">en El Sr. Intestino</em>
+						<!--<a href="#" class="creacion__seguir creacion__seguir--coleccion">+</a>-->
+					</div>
+
+					<div class="creacion__meta-data clearfix">
+
+						<div class="meta-data__item meta-data--visto clearfix">
+							<div class="meta-data__icon-wrapper">
+								<i class="icon-eye"></i>
+							</div>
+							<div class="meta-data__text">
+								99.9k
+							</div>
+						</div>
+
+						<div class="meta-data__item meta-data__item--subscriptores clearfix">
+							<div class="meta-data__icon-wrapper">
+								<i class="icon-user"></i>
+							</div>
+							<div class="meta-data__text">
+								99.9k
+							</div>
+						</div>
+
+						<div class="meta-data__item meta-data__item--me-gusta clearfix">
+							<div class="meta-data__icon-wrapper">
+								<i class="icon-heart"></i>
+							</div>
+							<div class="meta-data__text">
+								99.9k
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="creacion__ver-mas tabla">
+				<a href="#" class="ver-mas ver-mas--autor de-tabla">
+					Ver más de Juanelo
+				</a>
+				<a href="#" class="ver-mas ver-mas--coleccion de-tabla">
+					Ver más de "El Show de Juanelo"
+				</a>
+			</div>
+			
+			<div class="creacion__compartir tabla">
+				<span class="creacion__texto-compartir de-tabla">
+					Compartir en
+				</span>
+				<a href="#" class="creacion__link-compartir creacion__link-compartir--facebook de-tabla">
+					<i class="icon-facebook icono-compartir"></i>
+					<span class="texto-compartir">Facebook</span>
+				</a>
+				<a href="#" class="creacion__link-compartir creacion__link-compartir--twitter de-tabla">
+					<i class="icon-twitter icono-compartir"></i>
+					<span class="texto-compartir">Twitter</span>
+				</a>
+				<a href="#" class="creacion__link-compartir creacion__link-compartir--tumblr de-tabla">
+					<i class="icon-tumblr icono-compartir"></i>
+					<span class="texto-compartir">Tumblr</span>
+				</a>
+			</div>
+
+			<!--<div class="creacion__seguir tabla">
+				<a href="#" class="de-tabla creacion__seguir-boton creacion__seguir-boton--coleccion">
+					<span>+ Seguir Colección</span>
+				</a>
+				<a href="#" class="de-tabla creacion__seguir-boton creacion__seguir-boton--autor">
+					<span>+ Seguir Autor</span>
+				</a>
+				<a href="#" class="de-tabla creacion__seguir-boton creacion__seguir-boton--me-gusta">
+					<i class="icon-heart icono icono--megusta"></i>
+				</a>
+			</div>-->
+
+
+
+		</div>
+
+		<div class="golden-mayor columnas sin-padding creacion__contenedor-imagen">
+			<div class="contenedor-imagen__imagen">
+				<img class="creacion__imagen" src="/assets/images/Juanelo1986.png" alt="">
+			</div>
+			<div class="contenedor-imagen__comentarios blanco">
+				<i class="icon-chat"></i>
+				<strong class="comentarios__cantidad">9.9k</strong> Comentarios
+			</div>
+		</div>
+	</div>
+	
+	
+</div>

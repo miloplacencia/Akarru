@@ -1,0 +1,111 @@
+<navbar></navbar>
+
+<div class="contenedor contenedor--titulo-opciones titulo-opciones">
+	<h1 class="opciones__titulo">Opciones de Perfil</h1>
+</div>
+<div class="contenedor contenedor--opciones opciones">
+	<div class="contenedor contenedor--lista-opciones">
+
+		<div class="un-cuarto columnas opciones__avatar">
+			<div class="opciones__avatar-usuario">
+				<image-crop-avatar image="opciones.user.perfil.avatar"></image-crop-avatar>
+				<div class="opciones__pro-tip">
+					<h3 class="pro-tip__titulo">PRO TIPS</h3>
+					<ul class="pro-tip__lista">
+						<li class="pro-tip__item-lista">Click y arrastra para mover la imagen dentro del cuadro.</li>
+						<li class="pro-tip__item-lista">Mueve la rueda para hacer Zoom.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="tres-cuartos columnas blanco opciones__lista">
+			<ul class="vertical opciones__formulario-perfil">
+				<li class="opciones__lista-formulario">
+					<label for="" class="opciones__label">
+						Nombre de Usuario
+						<small class="opciones__small">
+							Así es como te conoceran todos por acá.
+						</small>
+					</label>
+					<input type="text" class="opciones__input" ng-model="opciones.user.usuario">
+				</li>
+				<li class="opciones__lista-formulario">
+					<label for="" class="opciones__label">
+						Ubicación Actual
+						<small class="opciones__small">
+							¿Dónde te encuentras actualmente viviendo?.
+						</small>
+					</label>
+					<input type="text" class="opciones__input" ng-model="opciones.user.perfil.ubicacion">
+				</li>
+				<li class="opciones__lista-formulario">
+					<label for="" class="opciones__label">
+						Un poco sobre ti
+						<small class="opciones__small">
+							Para que la gente sepa quien eres, segun tus palabras.
+						</small>
+					</label>
+					<textarea name="" id="" rows="5" class="opciones__input opciones__input--textarea" ng-model="opciones.user.perfil.sobreMi"></textarea>
+				</li>
+				<li class="opciones__lista-formulario">
+					<label for="" class="opciones__label">
+						Email
+						<small class="opciones__small">
+							<strong>Recuerda</strong> que si cambias tu e-mail ¡tu nuevo e-mail sera tu ingreso!
+						</small>
+					</label>
+					<input type="email" class="opciones__input" ng-model="opciones.user.email">
+				</li>
+				<li class="opciones__lista-formulario">
+					<label for="" class="opciones__label">
+						Facebook
+						<small class="opciones__small">
+							Tu Página de Facebook
+						</small>
+					</label>
+					<input type="text" class="opciones__input" ng-model="opciones.user.perfil.links[0].link">
+				</li>
+				<li class="opciones__lista-formulario">
+					<label for="" class="opciones__label">
+						Twitter
+						<small class="opciones__small">
+							Tu Cuenta de twitter
+						</small>
+					</label>
+					<input type="text" class="opciones__input" ng-model="opciones.user.perfil.links[1].link">
+				</li>
+				<li class="opciones__lista-formulario">
+					<label for="" class="opciones__label">
+						Tumblr / Blog
+						<small class="opciones__small">
+							Tu Blog en Tumblr
+						</small>
+					</label>
+					<input type="text" class="opciones__input" ng-model="opciones.user.perfil.links[2].link">
+				</li>
+				<li class="opciones__lista-formulario">
+					<label for="" class="opciones__label">
+						Mostrar Email
+						<small class="opciones__small">
+							¿Quieres que el resto pueda ver tu e-mail?
+						</small>
+					</label>
+					<on-off boolean="opciones.user.perfil.mostrarEmail"></on-off>
+				</li>
+				<li class="opciones__lista-formulario">
+					<label for="" class="opciones__label">
+						Filtro +18 Años
+						<small class="opciones__small">
+							Desactiva para quitar el filtro de contenido erótico o hardcore.
+						</small>
+					</label>
+					<on-off boolean="opciones.user.perfil.filtroNSFW"></on-off>
+				</li>
+				<li class="opciones__lista-formulario">
+					<input type="submit" value="Actualizar" class="boton boton--amarillo" ng-click="opciones.actualizar()">
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,108 @@
+.contenedor--titulo-opciones {
+	margin		: 0 auto;
+	padding		: 50px 0;
+	//background	: hsl(337, 5%, 90%);
+}
+.contenedor--opciones {
+	//padding			: 50px;
+	margin-bottom	: 50px;
+}
+.opciones__titulo {
+	text-transform	: uppercase;
+	font-weight		: normal;
+	color			: hsl(337, 10%, 30%);//hsl(0,0%,40%);
+	margin 			: 0;// auto 50px;
+	font-weight		: 700;
+}
+
+
+.opciones__pro-tip {
+	padding		: 20px;
+	background	: hsl(60, 90%, 85%);
+}
+.pro-tip__titulo {
+	margin 		: 0 auto 10px;
+	font-weight	: normal;
+}
+.pro-tip__lista {
+	padding-left: 20px;
+	font-size	: 14px;
+}
+.pro-tip__item-lista {
+	margin-bottom	: 10px;
+}
+
+
+.opciones__lista {
+	padding	: 50px;
+}
+
+.opciones__lista-formulario {
+	margin-bottom	: 40px; 
+}
+.opciones__label {
+	display			: block;
+	text-transform	: uppercase;
+	margin-bottom 	: 5px;
+	font-size		: 16px;
+	color			: hsl(336, 5%, 50%);
+
+}
+.opciones__small {
+	float			: right;
+	font-size		: 12px;
+	text-transform	: initial;
+	color			: hsl(0,0%,60%);
+	margin-top		: 2px;
+}
+
+.opciones__input {
+	width		: 100%;
+	padding		: 10px 15px;
+	font-size	: 24px;
+	border		: 1px solid hsl(0,0%,80%);
+	color		: #4D4D4D;
+}
+
+
+.imageBox {
+	width 		: 100%;
+	padding-top	: 100%;
+	
+	&.imageLoaded {
+		.imageSelector {
+			border			: 0;
+			pointer-events	: none;
+			opacity			: 0;
+		}
+	}
+	&:hover {
+		.imageSelector {
+			pointer-events	: auto;
+			opacity			: 1;
+		}
+	}
+}
+.imageSelector {
+	pointer-events	: none;
+	border			: 5px dashed hsl(337, 15%, 90%);
+	cursor			: pointer;
+	transition 		: all 0.3s ease-in-out;
+	text-align		: center;
+	background		: hsla(337, 63%, 17%,.7);
+	color			: $amarillo-marca;
+	font-size		: 16px;
+	text-transform	: uppercase;
+	font-weight		: bold;
+	padding			: calc(50% - 8px) 0;
+}
+.imageSend {
+	display			: block;
+	padding			: 20px;
+	text-align		: center;
+	text-transform	: uppercase;
+	font-weight		: bold;
+	color			: $morado-marca;
+	background		: $amarillo-marca;
+	cursor			: pointer;
+}

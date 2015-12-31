@@ -1,0 +1,84 @@
+/* NAV BAR */
+body {
+	padding-top : $navbar-height;
+}
+
+.navbar {
+	background 	: $morado-marca;//#222; 
+	height 		: $navbar-height;
+}
+.navbar__inner {
+	color 		: white;
+}
+.navbar__contenedor-logo {
+	vertical-align	: top;
+	display 		: inline-block;
+	height 			: $navbar-height;
+	float 			: left;
+}
+.navbar__logo {
+	margin 	: 0;
+	height 	: 100%;
+}
+.navbar__logo-link {
+	display 		: block;
+	height 			: 100%;
+	text-decoration : none;
+}
+.icono-logo--navbar {
+	height 		: 50px;
+	width 		: 50px;
+	padding 	: 10px;
+	background 	: $rojo-marca;
+	* {
+		fill 	: $morado-marca;
+	}
+}
+.logo-tipo--navbar {
+	height 	: 24px;
+	width	: 107px;
+	margin 	: 13px 0;
+
+	* {
+		fill 	: $rojo-marca;//white;
+	}
+}
+
+.navbar__nav {
+	height 			: $navbar-height;
+	list-style-type : none;
+	margin 			: 0;
+	padding 		: 0;
+	display 		: table;
+	float 			: right;
+}
+.navbar__list {
+	display 		: table-cell;
+	height 			: $navbar-height;
+	vertical-align 	: middle;
+}
+.navbar__link {
+	color 			: white;
+	display 		: table-cell;
+	vertical-align 	: middle;
+	padding 		: 10px 20px;
+	height 			: $navbar-height;
+	text-decoration : none;
+	
+	&.call2action {
+		&.rojo {
+			background 	: $rojo-marca;
+		}
+		&.morado {
+			background 	: $morado-marca;
+		}
+	}
+	&:hover {
+		background 	: hsl(60, 77%, 51%);
+		color 		: hsl(337, 63%, 17%);
+	}
+
+}
+.navbar__text {
+	margin	: 0 10px;
+}

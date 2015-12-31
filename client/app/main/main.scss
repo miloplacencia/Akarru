@@ -1,0 +1,112 @@
+.contenedor--bienvenida {
+    color: white;
+    text-align: center;
+}
+
+.contenedor.contenedor--main {
+    position    : absolute;
+    width       : 500px;
+    height      : 320px;
+    top         : 50%;
+    left        : 50%;
+    margin-top  : -250px;
+    margin-left : -250px;
+}
+
+.fondo-contenedor {
+    padding-top         : 50px;
+    background-image    : url(/assets/images/bg.jpg);
+    background-position : 50%  25%;
+    background-size     : cover;
+    background-repeat   : no-repeat;
+    position            : fixed;
+    top                 : 0;
+    bottom              : 0;
+    left                : 0;
+    right               : 0;
+    
+    &:before {
+        content     : "";
+        position    : absolute;
+        top         : 0;
+        left        : 0;
+        right       : 0;
+        bottom      : 0;
+        background  : hsla(0,0%,0%,.25);
+    }
+
+    &:after {
+        content     : "por Abyssmø";
+        position    : absolute;
+        display     : block;
+        bottom      : 0;
+        right       : 0;
+        padding     : 5px 10px;
+        background  : black;
+    }
+}
+.icono-logo--main {
+    display : block;
+    margin  : 0 auto 10px;
+    width   : 50px;
+    height  : 50px;
+    * {
+        fill    : white;
+    }
+} 
+.logo-tipo--main {
+    display : block;
+    margin  : 0 auto 20px;
+    width   : 150px;
+    * {
+        fill    : white;
+    } 
+}
+$ancho-login: 300px; 
+
+.boton {
+    padding         : 15px;
+    display         : inline-block;
+    text-decoration : none;
+    color           : white;
+    width           : $ancho-login;
+    font-size       : 16px;
+    font-weight     : bold;
+    border          : 0;
+    text-transform  : uppercase;
+
+    &.boton--main {
+        display         : block;
+        margin          : 0 auto;
+        text-transform  : uppercase;
+    }
+    &.boton--rojo {
+        background  : $rojo-marca;
+    }
+    &.boton--morado {
+        color       : $amarillo-marca;
+        background  : $morado-marca;
+    }
+    &.boton--amarillo {
+        color       : $morado-marca;
+        background  : $amarillo-marca;
+    }
+}
+
+.input {
+    border      : 0;
+    padding     : 10px;
+    font-size   : 15px;
+    display     : block;
+    color       : #333;    
+    &.input--login {
+        border-top  : 1px solid hsl(0,0%,90%);
+        text-align  : center;
+        margin      : 0 auto;
+        width       : $ancho-login;
+    }
+    &:first-of-type {
+        border-top  : 0;
+    }
+}
+

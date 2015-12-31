@@ -1,0 +1,51 @@
+@import '/assets/images/sprite.css';
+/**
+ * App-wide Styles
+ */
+
+$navbar-height 		: 50px;
+
+$morado-marca-1 	: hsl(337, 63%, 17%);//#451B36;
+$morado-marca-2		: hsl(287, 27%, 25%);
+$morado-marca-3 	: hsl(272, 27%, 25%);
+$morado-marca 		: $morado-marca-2;
+
+$amarillo-marca-1 	: hsl(60, 77%, 51%);
+$amarillo-marca-2 	: hsl(63, 87%, 50%);
+$amarillo-marca-3	: #C7D100;
+
+$amarillo-marca		: $amarillo-marca-2; 
+$rojo-marca			: $amarillo-marca;
+$fuente-sitio 		: 'cabin'; //pt sans,maven pro
+//lato - humanista
+//karla 2 grosores - 
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	height	: 100%;
+	color	: #333;
+}
+body {
+	background 	: hsl(60, 10%, 95%);
+	font		: 400 16px/1.4 $fuente-sitio,sans-serif;
+}
+.oculto {
+	display	: none;
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'account/login/login.scss';
+@import 'admin/admin.scss';
+@import 'dashboard/opciones/opciones.scss';
+@import 'dashboard/primerIngreso/primerIngreso.scss';
+@import 'directives/navbar/navbar.scss';
+@import 'directives/onOff/onOff.scss';
+@import 'inicio/inicio.scss';
+@import 'main/main.scss';
+@import 'styles/_functions.scss';
+@import 'styles/_grilla.scss';
+@import 'styles/_helpers.scss';
+// endinjector
